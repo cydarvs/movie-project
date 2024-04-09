@@ -1,12 +1,12 @@
 .basicLightbox {
+  width: 100%;
+  height: 100vh;
   opacity: .01;
   z-index: 1000;
   will-change: opacity;
   background: #000c;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
   transition: opacity .4s;
   display: flex;
   position: fixed;
@@ -19,9 +19,9 @@
 }
 
 .basicLightbox__placeholder {
+  max-width: 100%;
   z-index: 1;
   will-change: transform;
-  max-width: 100%;
   transition: transform .4s;
   transform: scale(.9);
 }
@@ -45,12 +45,13 @@
 }
 
 .basicLightbox--iframe .basicLightbox__placeholder, .basicLightbox--img .basicLightbox__placeholder, .basicLightbox--video .basicLightbox__placeholder {
-  pointer-events: none;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 .basicLightbox--visible .basicLightbox__placeholder {
   transform: scale(1);
 }
+
 /*# sourceMappingURL=index.c93176e6.css.map */

@@ -282,7 +282,7 @@
   }
 
   to {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
 }
 
@@ -1273,12 +1273,12 @@
 
   80% {
     animation-timing-function: ease-in;
-    transform: perspective(400px)scale3d(.95, .95, .95)translateZ(0)rotateY(0);
+    transform: perspective(400px)scale3d(.95, .95, .95)translateZ(0)rotateY(0deg);
   }
 
   to {
     animation-timing-function: ease-in;
-    transform: perspective(400px)scaleX(1)translateZ(0)rotateY(0);
+    transform: perspective(400px)scaleX(1)translateZ(0)rotateY(0deg);
   }
 }
 
@@ -2027,4 +2027,5 @@
 .animate__slideOutUp {
   animation-name: slideOutUp;
 }
+
 /*# sourceMappingURL=library.6c56cf43.css.map */

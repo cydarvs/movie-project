@@ -1,5 +1,4 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -16,8 +15,8 @@ body {
 }
 
 hr {
-  color: inherit;
   height: 0;
+  color: inherit;
 }
 
 abbr[title] {
@@ -78,7 +77,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 :-moz-focusring {
-  outline: 1px dotted buttontext;
+  outline: 1px dotted ButtonText;
 }
 
 :-moz-ui-invalid {
@@ -93,11 +92,7 @@ progress {
   vertical-align: baseline;
 }
 
-::-webkit-inner-spin-button {
-  height: auto;
-}
-
-::-webkit-outer-spin-button {
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -120,10 +115,10 @@ summary {
 }
 
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  border: 0;
   width: 1px;
   height: 1px;
+  clip: rect(0 0 0 0);
+  border: 0;
   margin: -1px;
   padding: 0;
   position: absolute;
@@ -137,9 +132,9 @@ summary {
 
 body {
   color: #fff;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   line-height: 1.3;
@@ -179,20 +174,20 @@ a:not([class]) {
 }
 
 .container {
-  width: 320px;
   max-width: 1280px;
+  width: 320px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 768px;
     padding: 0 32px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
     padding: 0 32px;
@@ -201,11 +196,11 @@ a:not([class]) {
 
 .visually-hidden {
   white-space: nowrap;
+  width: 1px;
+  height: 1px;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   border: 0;
-  width: 1px;
-  height: 1px;
   margin: -1px;
   padding: 0;
   position: absolute;
@@ -213,42 +208,42 @@ a:not([class]) {
 }
 
 .header {
+  height: 216px;
   background-color: #0000008f;
   background-image: url("header-mobile-min.22b364d3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 216px;
   position: relative;
   top: 0;
   left: 0;
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-device-pixel-ratio >= 2), (resolution >= 192dpi), (resolution >= 2x) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2x) {
   .header {
     background-image: url("header-mob@2x-min.4b52226b.png");
   }
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .header {
     background-image: url("header-tablet-min.855a63de.png");
   }
 }
 
-@media screen and (width >= 768px) and (min-device-pixel-ratio: 2), screen and (width >= 768px) and (-webkit-device-pixel-ratio >= 2), screen and (width >= 768px) and (resolution >= 192dpi), screen and (width >= 768px) and (resolution >= 2x) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2x) {
   .header {
     background-image: url("header-tablet@2x-min.12e39319.png");
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .header {
     background-image: url("header-desktop-min.8df3be7a.png");
   }
 }
 
-@media screen and (width >= 1280px) and (min-device-pixel-ratio: 2), screen and (width >= 1280px) and (-webkit-device-pixel-ratio >= 2), screen and (width >= 1280px) and (resolution >= 192dpi), screen and (width >= 1280px) and (resolution >= 2x) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2x) {
   .header {
     background-image: url("header-desktop@2x-min.b874a523.png");
   }
@@ -312,11 +307,11 @@ a:not([class]) {
 
 .form-input {
   color: #fff;
+  width: 280px;
   background: none;
   border: none;
   border-bottom: .5px solid #fff;
   outline: 0;
-  width: 280px;
   padding: 10px;
   font-size: 14px;
   font-weight: 400;
@@ -324,13 +319,13 @@ a:not([class]) {
   position: relative;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .form-input {
     width: 336px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .form-input {
     width: 394px;
   }
@@ -343,11 +338,11 @@ a:not([class]) {
 .search-btn {
   stroke: #fff;
   fill: #fff;
+  width: 22px;
+  height: 22px;
   background: url("search.5f21a0d7.svg") center no-repeat;
   border: none;
   border-radius: 50%;
-  width: 22px;
-  height: 22px;
   transition: transform .25s cubic-bezier(.4, 0, .2, 1);
   position: absolute;
   bottom: 10px;
@@ -366,10 +361,10 @@ a:not([class]) {
 
 .site-nav__link--current:after {
   content: "";
-  background-color: #ff6b08;
-  border: none;
   width: 100%;
   height: 3px;
+  background-color: #ff6b08;
+  border: none;
   transition: width .2s ease-in-out;
   display: block;
   position: absolute;
@@ -382,7 +377,7 @@ a:not([class]) {
   width: 0;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .logo__name {
     color: #fff;
     font-size: 30px;
@@ -410,7 +405,7 @@ a:not([class]) {
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .form-input {
     width: 394px;
   }
@@ -437,31 +432,31 @@ a:not([class]) {
   left: 0;
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-device-pixel-ratio >= 2), (resolution >= 192dpi), (resolution >= 2x) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2x) {
   .library-header {
     background-image: url("library-mobile@2x-min.2057650b.png");
   }
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .library-header {
     background-image: url("library-tablet-min.b0bc0f7a.png");
   }
 }
 
-@media screen and (width >= 768px) and (min-device-pixel-ratio: 2), screen and (width >= 768px) and (-webkit-device-pixel-ratio >= 2), screen and (width >= 768px) and (resolution >= 192dpi), screen and (width >= 768px) and (resolution >= 2x) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2x) {
   .library-header {
     background-image: url("library-tablet@2x-min.b90d48cc.png");
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .library-header {
     background-image: url("library-desktop-min.d2748c60.png");
   }
 }
 
-@media screen and (width >= 1280px) and (min-device-pixel-ratio: 2), screen and (width >= 1280px) and (-webkit-device-pixel-ratio >= 2), screen and (width >= 1280px) and (resolution >= 192dpi), screen and (width >= 1280px) and (resolution >= 2x) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2x) {
   .library-header {
     background-image: url("library-desktop@2x-min.3f5bce40.png");
   }
@@ -474,14 +469,14 @@ a:not([class]) {
 }
 
 .button {
+  width: 148px;
+  height: 42px;
   cursor: pointer;
   color: #fff;
   text-transform: uppercase;
   background-color: #0000;
   border: 1px solid #fff;
   border-radius: 5px;
-  width: 148px;
-  height: 42px;
 }
 
 .button:first-child {
@@ -516,34 +511,34 @@ a:not([class]) {
   display: flex;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .movies, .movies-lib {
     justify-content: center;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .movies, .movies-lib {
     justify-content: flex-start;
   }
 }
 
 .movie_list_item {
-  cursor: pointer;
   width: 280px;
+  cursor: pointer;
   font-size: 12px;
   transition: scale .25s;
   position: relative;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .movie_list_item {
     width: 336px;
     font-size: 12px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .movie_list_item {
     flex-basis: calc(33.3333% - 10.6667px);
     font-size: 20px;
@@ -575,13 +570,13 @@ a:not([class]) {
 }
 
 .movie__average {
+  width: 36px;
+  height: 36px;
   color: #fff;
   background-color: #000;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
   font-size: 14px;
   display: flex;
   position: absolute;
@@ -591,10 +586,10 @@ a:not([class]) {
 
 .movie__cover--darkened {
   opacity: .1;
-  z-index: 1;
-  border-radius: 5px;
   max-width: 100%;
   height: 100%;
+  z-index: 1;
+  border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
@@ -603,14 +598,14 @@ a:not([class]) {
 
 .watched-warning {
   color: #000;
-  text-transform: uppercase;
   max-width: 250px;
+  text-transform: uppercase;
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.2;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .watched-warning {
     max-width: 450px;
     font-size: 20px;
@@ -618,7 +613,7 @@ a:not([class]) {
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .watched-warning {
     max-width: 550px;
     font-size: 25px;
@@ -630,7 +625,7 @@ a:not([class]) {
   border-radius: 5px;
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .movie_list_image {
     height: 592.5px;
   }
@@ -644,22 +639,24 @@ a:not([class]) {
 }
 
 .footer {
-  text-align: center;
-  background-color: #f7f7f7;
   width: 100%;
   height: 100px;
+  text-align: center;
+  background-color: #f7f7f7;
   margin-top: auto;
   padding-top: 28px;
   padding-bottom: 29px;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .footer {
     height: 79px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
+}
 
+@media screen and (min-width: 768px) {
   .footer__container {
     justify-content: center;
     align-items: center;
@@ -673,7 +670,7 @@ a:not([class]) {
   line-height: 1.14286;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .footer__text {
     justify-content: center;
     align-items: center;
@@ -690,7 +687,7 @@ a:not([class]) {
   display: flex;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .footer__sub {
     font-size: 16px;
     line-height: 1.1875;
@@ -716,7 +713,7 @@ a:not([class]) {
   color: #ff6b08;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .footer__link {
     padding: 0;
     font-size: 16px;
@@ -725,12 +722,12 @@ a:not([class]) {
 }
 
 .modal-wrapper {
+  width: 100%;
+  height: 100%;
   z-index: 999;
   background-color: #00000079;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   display: none;
   position: fixed;
   top: 0;
@@ -739,10 +736,10 @@ a:not([class]) {
 }
 
 .backdrop {
-  cursor: pointer;
-  opacity: .7;
   width: 14px;
   height: 14px;
+  cursor: pointer;
+  opacity: .7;
   position: absolute;
   top: 16px;
   right: 16px;
@@ -754,9 +751,9 @@ a:not([class]) {
 
 .backdrop:before, .backdrop:after {
   content: " ";
-  background-color: #000;
-  width: 2px;
   height: 14px;
+  width: 2px;
+  background-color: #000;
   position: absolute;
   left: 5px;
 }
@@ -774,20 +771,21 @@ a:not([class]) {
 }
 
 .closeModalAnimation {
-  animation: .6s linear closing;
+  animation: closing .6s linear;
 }
 
 .openModalAnimation {
-  animation: .6s linear opening;
+  animation: opening .6s linear;
 }
 
 #modal {
-  background-color: #fff;
-  border-radius: 3px;
   width: 100%;
   max-width: 806px;
-  height: max-content;
+  height: 100%;
   max-height: 558px;
+  height: max-content;
+  background-color: #fff;
+  border-radius: 3px;
   margin: 0 auto;
   padding: 40px 12px;
   position: relative;
@@ -814,14 +812,14 @@ a:not([class]) {
 }
 
 #movie-card {
-  border-radius: 5px;
-  width: auto;
   height: auto;
+  width: auto;
+  border-radius: 5px;
 }
 
 #content {
-  align-items: start;
   width: 100%;
+  align-items: start;
   display: flex;
 }
 
@@ -873,10 +871,10 @@ a:not([class]) {
 
 #right-content {
   color: #000;
+  max-width: 50%;
   text-align: justify;
   flex-direction: column;
   align-items: start;
-  max-width: 50%;
   margin-left: 16px;
   margin-right: 12px;
   font-size: 16px;
@@ -885,10 +883,10 @@ a:not([class]) {
 }
 
 #film-img {
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 375px;
   height: 478px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #film-title {
@@ -918,13 +916,13 @@ a:not([class]) {
   display: flex;
 }
 
-@media screen and (width >= 320px) {
+@media screen and (min-width: 320px) {
   .btn_wrapper {
     gap: 20px;
   }
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .btn_wrapper {
     gap: 15px;
   }
@@ -948,32 +946,34 @@ a:not([class]) {
   border-color: #0000;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .add-to-watched-btn, .add-to-queue-btn {
     min-width: 125px;
     padding: 14px 10px 12px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .add-to-watched-btn, .add-to-queue-btn {
     min-width: 136px;
   }
 }
 
-@media screen and (width >= 320px) and (width <= 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .add-to-watched-btn {
     max-width: 110px;
     padding: 6px 13px;
   }
+}
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .add-to-queue-btn {
     max-width: 110px;
     padding: 13px;
   }
 }
 
-@media screen and (width <= 992px) {
+@media screen and (max-width: 992px) {
   #modal {
     width: 704px;
     padding: 40px 36px;
@@ -994,15 +994,15 @@ a:not([class]) {
   }
 }
 
-@media screen and (width <= 767px) {
+@media screen and (max-width: 767px) {
   #movie-card {
     overflow: hidden;
   }
 
   #content {
-    flex-direction: column;
-    width: 245px;
     max-height: 460px;
+    width: 245px;
+    flex-direction: column;
     margin: 0;
     display: flex;
     overflow-y: scroll;
@@ -1035,6 +1035,7 @@ a:not([class]) {
   }
 
   #modal {
+    max-width: 320px;
     max-width: 280px;
     padding: 48px 20px;
   }
@@ -1054,14 +1055,14 @@ a:not([class]) {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .iframe-container {
     width: 720px;
     height: 405px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .iframe-container {
     width: 848px;
     height: 477px;
@@ -1080,11 +1081,11 @@ button {
 }
 
 .page-btn {
+  min-width: 40px;
+  height: 40px;
   background: none;
   border: none;
   border-radius: 5px;
-  min-width: 40px;
-  height: 40px;
   padding: 8px;
   font-family: inherit;
   font-size: 12px;
@@ -1108,30 +1109,30 @@ button {
 }
 
 .prev-btn, .next-btn {
+  width: 40px;
+  height: 40px;
   background: #f7f7f7;
   border: none;
   border-radius: 5px;
   place-content: center;
-  width: 40px;
-  height: 40px;
   display: flex;
 }
 
 .icon {
+  width: 16px;
+  height: 16px;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
   pointer-events: none;
   align-self: center;
-  width: 16px;
-  height: 16px;
   display: flex;
 }
 
 .icon-play {
   opacity: 0;
-  fill: currentColor;
   width: 50px;
+  fill: currentColor;
   transition: opacity .55s cubic-bezier(.4, 0, .2, 1);
   position: absolute;
   top: 50%;
@@ -1139,7 +1140,7 @@ button {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
   .end-btn, .start-btn, .next-dots, .prev-dots {
     display: none;
   }
@@ -1163,12 +1164,12 @@ button {
 }
 
 .loader {
+  width: 100px;
+  height: 100px;
   border: 15px solid #fe934b99;
   border-left-color: #ff6b08;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  animation: 1.3s linear infinite loader;
+  animation: loader 1.3s linear infinite;
 }
 
 @keyframes loader {
@@ -1178,11 +1179,11 @@ button {
 }
 
 .mask {
+  width: 100%;
+  height: 100%;
   z-index: 100;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   transition: all .6s;
   display: flex;
   position: fixed;
@@ -1194,10 +1195,10 @@ button {
 }
 
 .backdrop-modal {
-  z-index: 999;
-  background-color: #00000079;
   width: 100%;
   height: 100%;
+  z-index: 999;
+  background-color: #00000079;
   position: fixed;
   top: 0;
   left: 0;
@@ -1205,23 +1206,23 @@ button {
 
 .team__backdrop--hidden {
   white-space: nowrap;
+  width: 1px;
+  height: 1px;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   border: 0;
-  width: 1px;
-  height: 1px;
   padding: 0;
   position: absolute;
   overflow: hidden;
 }
 
 .team__modal--close {
+  width: 35px;
+  height: 35px;
   fill: #403c3c;
   transition-property: fill border-color;
   background: none;
   border: none;
-  width: 35px;
-  height: 35px;
   padding: 4px;
   text-decoration: none;
   transition-duration: .25s;
@@ -1235,13 +1236,14 @@ button {
 }
 
 .team__modal {
+  max-width: 840px;
+  height: 100%;
+  max-height: 558px;
+  height: max-content;
   background-color: #f7f7f7;
   border-radius: 3px;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 840px;
-  height: max-content;
-  max-height: 558px;
   margin: 0;
   padding: 7px 7px 7px 20px;
   display: flex;
@@ -1267,7 +1269,7 @@ button {
   display: flex;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .team__title {
     margin-bottom: 30px;
     padding-top: 15px;
@@ -1276,55 +1278,55 @@ button {
 }
 
 .popcorn {
-  border-radius: 5px;
   width: 50px;
   height: 60px;
+  border-radius: 5px;
   margin-left: 10px;
 }
 
 H1:hover:after {
-  border-bottom-width: 1px;
   width: 0%;
+  border-bottom-width: 1px;
 }
 
 .team__box {
+  width: 278px;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  width: 278px;
   display: flex;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .team__box {
-    gap: 30px;
     width: 490px;
+    gap: 30px;
     margin-bottom: 35px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .team__box {
-    gap: 45px;
     width: 790px;
+    gap: 45px;
     margin-bottom: 35px;
   }
 }
 
 .team__member {
+  width: 230px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 230px;
   transition: transform .45s cubic-bezier(.4, 0, .2, 1);
   display: flex;
 }
 
 .team__photo {
+  height: 100px;
+  width: 100px;
   border: 2px;
   border-radius: 50px;
-  width: 100px;
-  height: 100px;
   margin: auto;
   box-shadow: 0 0 3px 5px #ccc;
 }
@@ -1336,14 +1338,14 @@ H1:hover:after {
   transition-duration: .5s;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .team__name {
     align-content: center;
     font-size: 19px;
   }
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .team__name {
     font-size: 22px;
   }
@@ -1355,26 +1357,26 @@ H1:hover:after {
   font-weight: 500;
 }
 
-@media screen and (width >= 1280px) {
+@media screen and (min-width: 1280px) {
   .team__role {
     font-size: 18px;
   }
 }
 
 .team__card {
+  width: 100px;
+  height: auto;
   color: #0000;
   z-index: 0;
   background: none;
   border: none;
   border-radius: 10%;
   outline: none;
-  width: 100px;
-  height: auto;
   margin-bottom: 10px;
   position: relative;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   .team__card {
     width: 100%;
     height: 100%;
@@ -1387,11 +1389,11 @@ H1:hover:after {
 }
 
 .closeModalAnimationTeam {
-  animation: .4s linear closingTeam;
+  animation: closingTeam .4s linear;
 }
 
 .openModalAnimationTeam {
-  animation: .4s linear openingTeam;
+  animation: openingTeam .4s linear;
 }
 
 @keyframes openingTeam {
@@ -1413,4 +1415,5 @@ H1:hover:after {
     transform: translateX(100%);
   }
 }
+
 /*# sourceMappingURL=index.b07a87f3.css.map */
