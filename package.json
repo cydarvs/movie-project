@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /movie-project/",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -28,10 +28,10 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "buffer": "^6.0.3",
+    "gh-pages": "^6.1.1",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4",
-    "gh-pages": "^6.1.1"
+    "posthtml-include": "^1.7.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
