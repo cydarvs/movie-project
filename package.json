@@ -5,8 +5,7 @@
   "homepage": "https://cydarvs.github.io/movie-project/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /movie-project/",
-    "deploy": "npm run build && gh-pages -d build"
+    "build": "parcel build src/*.html --public-url /movie-project/"
   },
   "repository": {
     "type": "git",
@@ -23,12 +22,12 @@
     "basiclightbox": "^5.0.4",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.7",
+    "svgo": "^2.8.0",
     "swiper": "^9.4.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "buffer": "^6.0.3",
-    "gh-pages": "^6.1.1",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
