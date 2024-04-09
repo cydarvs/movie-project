@@ -533,7 +533,9 @@ parcelHelpers.export(exports, "API_KEY", ()=>API_KEY);
 let page;
 let query;
 const BASE_URL = "https://api.themoviedb.org/3";
-const API_KEY = "5b1af4b976f045151fd10f6c8ba2389b";
+const API_KEY = "9ce408291b177c2a2e598968d33c0b4a";
+// 9ce408291b177c2a2e598968d33c0b4a
+// mine --> 5b1af4b976f045151fd10f6c8ba2389b
 // const WATCH_KEY = 'watched';
 // const QUEUE_KEY = 'queue';
 async function fetchPopularMovies(page1) {

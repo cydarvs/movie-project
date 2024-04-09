@@ -15,41 +15,62 @@ const inputEl = document.querySelector('.form-input');
 
 resetCurrentPage();
 
-searchFormEl.addEventListener('submit', e => {
-  e.preventDefault();
-  if (!inputEl.value.trim()) {
-    return Notiflix.Notify.failure('Please enter a search query for the movie');
-  }
-  state.whatPaginated = 'search';
-  resetCurrentPage();
-  state.query = inputEl.value.trim();
-  moviesEl.innerHTML = '';
-  clearPagination();
-  fetchMoviesByQuery(state.query, state.currentPage)
-    .then(res => {
-      const { results, total_pages } = res;
-      state.totalPages = total_pages;
+/*
+const searchFormEl = document.getElementById('yourFormId');
 
-      if (state.totalPages > 1) {
-        renderPaginationMarkup();
+if (searchFormEl) {
+  searchFormEl.addEventListener('submit', e => {
+    e.preventDefault();
+    // Rest of your code
+  });
+} else {
+  console.error("Search form element not found");
+}
+*/
 
-        Notiflix.Notify.success(
-          'Hooray! We found something interesting for you :)'
-        );
-        inputEl.value = '';
-        removeNotifMeme();
-      } else {
-        Notiflix.Notify.failure('Nothing found, sorry :(');
-        inputEl.value = '';
-        addNotifMeme()
-      }
+if (searchFormEl) {
 
-      return renderGallery(results);
-    })
-    .then(res => {
-      moviesEl.insertAdjacentHTML('beforeend', res);
-    });
-});
+  searchFormEl.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!inputEl.value.trim()) {
+      return Notiflix.Notify.failure('Please enter a search query for the movie');
+    }
+    state.whatPaginated = 'search';
+    resetCurrentPage();
+    state.query = inputEl.value.trim();
+    moviesEl.innerHTML = '';
+    clearPagination();
+    fetchMoviesByQuery(state.query, state.currentPage)
+      .then(res => {
+        const { results, total_pages } = res;
+        state.totalPages = total_pages;
+
+        if (state.totalPages > 1) {
+          renderPaginationMarkup();
+
+          Notiflix.Notify.success(
+            'Hooray! We found something interesting for you :)'
+          );
+          inputEl.value = '';
+          removeNotifMeme();
+        } else {
+          Notiflix.Notify.failure('Nothing found, sorry :(');
+          inputEl.value = '';
+          addNotifMeme()
+        }
+
+        return renderGallery(results);
+      })
+      .then(res => {
+        moviesEl.insertAdjacentHTML('beforeend', res);
+      });
+  });
+}
+else 
+{
+  console.error("Search form element not found");
+}
+
 
 function addNotifMeme() {
   const memeNothing = document.querySelector('.meme-notif-nothing');

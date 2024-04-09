@@ -555,7 +555,9 @@ parcelHelpers.export(exports, "API_KEY", ()=>API_KEY);
 let page;
 let query;
 const BASE_URL = "https://api.themoviedb.org/3";
-const API_KEY = "5b1af4b976f045151fd10f6c8ba2389b";
+const API_KEY = "9ce408291b177c2a2e598968d33c0b4a";
+// 9ce408291b177c2a2e598968d33c0b4a
+// mine --> 5b1af4b976f045151fd10f6c8ba2389b
 // const WATCH_KEY = 'watched';
 // const QUEUE_KEY = 'queue';
 async function fetchPopularMovies(page1) {
@@ -996,7 +998,18 @@ var _state = require("./state");
 const searchFormEl = document.querySelector(".header-search-form");
 const inputEl = document.querySelector(".form-input");
 (0, _pagination.resetCurrentPage)();
-searchFormEl.addEventListener("submit", (e)=>{
+/*
+const searchFormEl = document.getElementById('yourFormId');
+
+if (searchFormEl) {
+  searchFormEl.addEventListener('submit', e => {
+    e.preventDefault();
+    // Rest of your code
+  });
+} else {
+  console.error("Search form element not found");
+}
+*/ if (searchFormEl) searchFormEl.addEventListener("submit", (e)=>{
     e.preventDefault();
     if (!inputEl.value.trim()) return (0, _notiflixDefault.default).Notify.failure("Please enter a search query for the movie");
     (0, _state.state).whatPaginated = "search";
@@ -1022,6 +1035,7 @@ searchFormEl.addEventListener("submit", (e)=>{
         (0, _renderingMovieCards.moviesEl).insertAdjacentHTML("beforeend", res);
     });
 });
+else console.error("Search form element not found");
 function addNotifMeme() {
     const memeNothing = document.querySelector(".meme-notif-nothing");
     memeNothing;
