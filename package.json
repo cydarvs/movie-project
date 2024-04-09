@@ -5,7 +5,8 @@
   "homepage": "https://cydarvs.github.io/movie-project/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /movie-project/"
+    "build": "parcel build src/*.html --public-url /movie-project/",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "repository": {
     "type": "git",
